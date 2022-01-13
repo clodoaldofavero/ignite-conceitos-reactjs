@@ -21,7 +21,8 @@ export function TaskList() {
         id: parseInt(Math.random().toString().slice(2)),
         title: newTaskTitle,
         isComplete: false
-      }])
+      }]);
+      setNewTaskTitle('');
     }
   }
 
