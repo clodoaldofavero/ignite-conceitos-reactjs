@@ -32,12 +32,10 @@ export function TaskList() {
     let index = updatedTasks.findIndex(task => task.id == id);
     updatedTasks[index].isComplete = !updatedTasks[index].isComplete;*/
 
-    let updatedTasks = tasks.map(task => {
-      return {
+    const updatedTasks = tasks.map(task => task.id == id ? {
         ...task,
-        isComplete: task.id == id ? !task.isComplete : task.isComplete
-      }
-    })
+        isComplete: !task.isComplete 
+      } : task)
     setTasks(updatedTasks);
   }
 
